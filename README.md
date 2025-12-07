@@ -24,6 +24,7 @@ False Alarm Detection via “Help Found” button
 
 Real-time OLED readout of sensor data
 
+
 Automatically sends mobile notifications for:
 
 Fall detected
@@ -34,6 +35,7 @@ High temperature
 
 False alarm / alert cleared
 
+
 Users can also:
 
 View live BPM & temperature from the app
@@ -43,6 +45,7 @@ Use an in-app toggle to activate/deactivate sensors
 Control sensors using Google Assistant voice commands
 
 Acknowledge alarms through the cloud or hardware button
+
 
 🧩 System Components & Technologies
 🟦 ESP32-C3 (XIAO ESP32-C3)
@@ -67,6 +70,7 @@ ADC-based temperature measurement
 
 Accurate in 0–70°C range
 
+
 ❤️ KS0015 Pulse Sensor
 
 IR-based photoplethysmography
@@ -76,6 +80,7 @@ Analog waveform sensing
 Converted into a simplified BPM value
 
 Provides early detection for abnormal heart rate
+
 
 📉 MPU6050 Accelerometer
 
@@ -89,6 +94,7 @@ Total acceleration magnitude
 
 A fall-latch that keeps buzzer ON until acknowledged
 
+
 🔈 Buzzer + Help Found Button
 
 Buzzer sounds during emergencies
@@ -96,6 +102,7 @@ Buzzer sounds during emergencies
 Button clears alarm, sends False Alarm notification
 
 Integrated with RainMaker state sync
+
 
 🖥 SSD1306 OLED Display (I²C)
 
@@ -110,6 +117,7 @@ Sensor status
 Emergency warnings
 
 Fall detected messages
+
 
 📱 ESP RainMaker (Cloud + Mobile App + Voice Assistant)
 
@@ -127,6 +135,7 @@ Google Assistant support
 
 Time-series data logging
 
+
 🛠 ESP-IDF (Framework)
 
 Handles:
@@ -142,6 +151,7 @@ GPIO control
 Wi-Fi & cloud integration
 
 Logging/monitoring tools
+
 
 📡 System Architecture Diagram
       +---------------------------------------------------+
