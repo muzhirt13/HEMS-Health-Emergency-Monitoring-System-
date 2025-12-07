@@ -1,18 +1,153 @@
-# GPIO Example
+# HEMS-Health-Emergency-Monitoring-System-
+OBE5043: Advanced Embedded System Project
+Developed with guidance and support from Dr. Zuki
 
-## Build and Flash firmware
+This project—HEMS (Health Emergency Monitoring System)—was developed as part of the course OBE5043: Advanced Embedded System Project.
+Special acknowledgment and heartfelt appreciation go to Dr. Zuki, whose expertise, continuous support, and guidance greatly contributed to the successful implementation of this system.
 
-Follow the ESP RainMaker Documentation [Get Started](https://rainmaker.espressif.com/docs/get-started.html) section to build and flash this firmware. Just note the path of this example.
+📌 Project Overview
 
-## What to expect in this example?
+HEMS is an integrated real-time health and emergency monitoring system built using the ESP32-C3 and ESP RainMaker Cloud Platform.
+It continuously monitors vital health parameters and can automatically trigger emergency alerts when dangerous conditions are detected.
 
-- This example just provides 3 boolean parameters, linked to 3 GPIOS.
-- Toggling the buttons on the phone app should toggle the GPIOs on your board (and the LEDs, if any, connected to the GPIOs), and also print messages like these on the ESP32-S2 monitor:
+HEMS monitors:
 
-```
-I (16073) app_main: Received value = true for GPIO-Device - Red
-```
+Body Temperature — via MCP9700 analog sensor
 
-### Reset to Factory
+Heart Rate (BPM) — via KS0015 pulse sensor
 
-Press and hold the BOOT button for more than 3 seconds to reset the board to factory defaults. You will have to provision the board again to use it.
+Fall Detection — via MPU6050 accelerometer
+
+Emergency Buzzer Alerts
+
+False Alarm Detection via “Help Found” button
+
+Real-time OLED readout of sensor data
+
+
+Automatically sends mobile notifications for:
+
+Fall detected
+
+High BPM
+
+High temperature
+
+False alarm / alert cleared
+
+
+Users can also:
+
+View live BPM & temperature from the app
+
+Use an in-app toggle to activate/deactivate sensors
+
+Control sensors using Google Assistant voice commands
+
+Acknowledge alarms through the cloud or hardware button
+
+
+🧩 System Components & Technologies
+🟦 ESP32-C3 (XIAO ESP32-C3)
+
+RISC-V CPU
+
+Wi-Fi + BLE
+
+Ultra-low power
+
+Integrated ADC
+
+Ideal for IoT + real-time monitoring
+
+🌡 MCP9700 Temperature Sensor
+
+Linear analog output
+
+10mV/°C sensitivity
+
+ADC-based temperature measurement
+
+Accurate in 0–70°C range
+
+
+❤️ KS0015 Pulse Sensor
+
+IR-based photoplethysmography
+
+Analog waveform sensing
+
+Converted into a simplified BPM value
+
+Provides early detection for abnormal heart rate
+
+
+📉 MPU6050 Accelerometer
+
+3-axis digital accelerometer
+
+Used for fall detection using:
+
+Y-axis threshold
+
+Total acceleration magnitude
+
+A fall-latch that keeps buzzer ON until acknowledged
+
+
+🔈 Buzzer + Help Found Button
+
+Buzzer sounds during emergencies
+
+Button clears alarm, sends False Alarm notification
+
+Integrated with RainMaker state sync
+
+
+🖥 SSD1306 OLED Display (I²C)
+
+Displays:
+
+Temperature
+
+BPM
+
+Sensor status
+
+Emergency warnings
+
+Fall detected messages
+
+
+📱 ESP RainMaker (Cloud + Mobile App + Voice Assistant)
+
+Provides:
+
+Wi-Fi provisioning
+
+Live sensor telemetry
+
+Notifications
+
+Device control (on/off for each sensor)
+
+Google Assistant support
+
+Time-series data logging
+
+
+🛠 ESP-IDF (Framework)
+
+Handles:
+
+FreeRTOS tasks
+
+I²C communication
+
+ADC sampling
+
+GPIO control
+
+Wi-Fi & cloud integration
+
+Logging/monitoring tools
