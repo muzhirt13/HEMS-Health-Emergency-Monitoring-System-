@@ -151,26 +151,3 @@ GPIO control
 Wi-Fi & cloud integration
 
 Logging/monitoring tools
-
-
-📡 System Architecture Diagram
-      +---------------------------------------------------+
-      |                   HEMS System                     |
-      +---------------------------------------------------+
-      |  ESP32-C3                                          |
-      |  - MCP9700 (Temp)                                  |
-      |  - KS0015 (Pulse)                                  |
-      |  - MPU6050 (Fall)                                  |
-      |  - OLED Display                                    |
-      |  - Buzzer + Help Button                            |
-      +---------------------------------------------------+
-                      |
-                      ▼
-     +----------------------------------------+
-     |          ESP RainMaker Cloud           |
-     | - Mobile App (iOS/Android)             |
-     | - Alerts & Notifications               |
-     | - Live Telemetry (BPM/Temp)            |
-     | - Google Assistant Voice Control       |
-     +----------------------------------------+
-
