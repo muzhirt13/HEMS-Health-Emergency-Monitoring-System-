@@ -1,0 +1,8 @@
+source "C:/Users/muzhi/OneDrive/Desktop/AES Practical Task/v5.5.1/esp-idf/components/bootloader/Kconfig.projbuild"
+source "C:/Users/muzhi/OneDrive/Desktop/AES Practical Task/v5.5.1/esp-idf/components/esp_app_format/Kconfig.projbuild"
+source "C:/Users/muzhi/OneDrive/Desktop/AES Practical Task/v5.5.1/esp-idf/components/esp_rom/Kconfig.projbuild"
+source "C:/Users/muzhi/OneDrive/Desktop/AES Practical Task/v5.5.1/esp-idf/components/esptool_py/Kconfig.projbuild"
+source "C:/Users/muzhi/OneDrive/Desktop/AES Practical Task/v5.5.1/esp-idf/components/partition_table/Kconfig.projbuild"
+source "C:/Users/muzhi/OneDrive/Desktop/Projects/Final Project/gpio/main/Kconfig.projbuild"
+source "C:/Users/muzhi/OneDrive/Desktop/Projects/Final Project/gpio/managed_components/espressif__esp_rainmaker/Kconfig.projbuild"
+source "C:/Users/muzhi/OneDrive/Desktop/Projects/Final Project/gpio/managed_components/espressif__rmaker_app_network/Kconfig.projbuild"

@@ -1,0 +1,17 @@
+dependencies:
+  espressif/network_provisioning:
+    version: ~1.2.0
+  espressif/qrcode:
+    version: '*'
+  idf:
+    version: '>=5.1.0'
+description: Network connectivity helper component for ESP RainMaker applications
+  with WiFi and Thread support
+documentation: https://github.com/espressif/esp-rainmaker/tree/master/examples/common/rmaker_app_network/README.md
+issues: https://github.com/espressif/esp-rainmaker/issues
+repository: git://github.com/espressif/esp-rainmaker.git
+repository_info:
+  commit_sha: bf99e8d8f5ea56a81eeb12a58170507262ddd587
+  path: examples/common/rmaker_app_network
+url: https://github.com/espressif/esp-rainmaker/tree/master/examples/common/rmaker_app_network
+version: 1.0.0
